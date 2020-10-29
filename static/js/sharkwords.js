@@ -17,15 +17,22 @@ const WORDS = [
 let numWrong = 0;
 
 // Loop over the chars in `word` and create divs.
-//
 const createDivsForChars = (word) => {
-  // Replace this with your code
+  // Loop through letters in word and append a div to container
+  for (let i=0; i < word.length; i+=1){
+    let letter = (word[i]);
+    console.log(letter);
+    $('#word-container').append('<div class="letter-box ${letter}"></div>');
+  }
 };
 
 // Loop over each letter in `ALPHABET` and generate buttons.
-//
 const generateLetterButtons = () => {
-  // Replace this with your code
+  for (let i=0; i < ALPHABET.length; i+=1) {
+    let letter = (ALPHABET[i]);
+    console.log(letter);
+    $('#letter-buttons').append('<button> ${letter} </button>');
+  }
 };
 
 // Set the `disabled` property of `buttonEl` to `true.
